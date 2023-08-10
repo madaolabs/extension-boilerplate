@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "Extension boilerplate",
+  "version": "1.0.0",
+  "background": {
+    "service_worker": "src/extension/background/index.ts"
+  },
+  "action": { "default_popup": "src/extension/index.html" }
+}
