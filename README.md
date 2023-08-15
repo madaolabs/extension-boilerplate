@@ -1,11 +1,27 @@
-# React + TypeScript + Vite
+# Extension boilerplate
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Infrastructure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The boilerplate is designed using clean architecture.
+
+The **_domain** folder holds some data type files.
+The **_app** folder holds some single function files, can be tested, can call the **_domain** folder.
+The **_api** folder holds some business logic files, can call the **_app** and **_domain** folder.
+The **_ui** folder holds some ui files. can call the **_api** folder.
+The **_extension** folder holds extension files, used in the **manifest.json**
+
+```shell
+src
+   - _api
+   - _app
+   - _domain
+   - _extension
+   - _ui
+
+manifest.json
+```
 
 ## Expanding the ESLint configuration
 

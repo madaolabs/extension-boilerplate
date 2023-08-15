@@ -3,7 +3,14 @@
   "name": "Extension boilerplate",
   "version": "1.0.0",
   "background": {
-    "service_worker": "src/extension/background/index.ts"
+    "service_worker": "src/_extension/background/index.ts"
   },
-  "action": { "default_popup": "src/extension/index.html" }
+  "action": { "default_popup": "src/_extension/index.html" },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "<all_urls>"],
+      "js": ["src/_extension/content/index.ts"],
+      "run_at": "document_start"
+    }
+  ]
 }
